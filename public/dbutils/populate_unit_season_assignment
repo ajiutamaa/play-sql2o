@@ -1,0 +1,15 @@
+#-- populate master season --#
+INSERT INTO master_season (name, commodity, year, order_in_year, code) VALUES ('Gadu', 'Jagung Hibrida', 2014, 1, 'JAGUNG-GADU-2014');
+INSERT INTO master_season (name, commodity, year, order_in_year, code) VALUES ('Rendeng', 'Jagung Hibrida', 2014, 2, 'JAGUNG-RENDENG-2014');
+INSERT INTO master_season (name, commodity, year, order_in_year, code) VALUES ('Gadu', 'Jagung Hibrida', 2015, 1, 'JAGUNG-GADU-2015');
+INSERT INTO master_season (name, commodity, year, order_in_year, code) VALUES ('Rendeng', 'Jagung Hibrida', 2015, 2, 'JAGUNG-RENDENG-2015');
+
+#-- populate master unit --#
+INSERT INTO master_unit (name, head, coordinates) VALUES ('METRO', 46, POINT(105.323366667, -5.2075));
+INSERT INTO master_unit (name, head, coordinates) VALUES ('KETAPANG', 6, POINT(105.780277778, -5.983888889));
+
+#-- assign unit to season --#
+INSERT INTO master_unit_active_season (unit_id, season_id) VALUES (1, 1);
+INSERT INTO master_unit_active_season (unit_id, season_id) VALUES (1, 2);
+INSERT INTO master_unit_active_season (unit_id, season_id) VALUES (2, 3);
+INSERT INTO master_unit_active_season (unit_id, season_id) VALUES (2, 4);

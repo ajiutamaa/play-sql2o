@@ -1,0 +1,16 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# urls for location master data (desa, kecamatan, kabupaten, provinsi)
+GET         /master/desa/find               controllers.MasterDesaController.findDesa(provinsi_id:Int?=(-1), kabupaten_id:Int?=(-1), kecamatan_id:Int?=(-1), desa_id:Int?=(-1), page:Int?=(-1))
+GET         /master/provinsi/find           controllers.MasterDesaController.findProvinsi()
+GET         /master/kabupaten/find          controllers.MasterDesaController.findKabupaten(provinsi_id:Int?=(-1))
+GET         /master/kecamatan/find          controllers.MasterDesaController.findKecamatan(kabupaten_id:Int?=(-1))
+POST        /master/desa/update/unit        controllers.MasterDesaController.assignDesasToUnit()
+
+# url for master unit data
+GET         /master/unit/find               controllers.MasterUnitController.findUnit(season_id:Int?=(-1))
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                   controllers.Assets.versioned(path="/public", file: Asset)
